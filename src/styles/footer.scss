@@ -1,0 +1,7 @@
+footer {
+  @include bar-container;
+  background: $yellow;
+  font-size: 0.7rem;
+  font-weight: 300;
+  text-align: center;
+}

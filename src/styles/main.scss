@@ -1,0 +1,105 @@
+// Color variables
+$red: #e10135;
+$yellow: #ffd662;
+$dark-blue: #001f3f;
+
+@mixin bar-container {
+  padding: 1rem;
+  @media (min-width: 560px) {
+    padding: 1rem 5rem;
+  }
+}
+
+@mixin section-container {
+  padding: 2rem 1.5rem;
+  @media (min-width: 560px) {
+    padding: 3rem 5rem;
+  }
+}
+
+@keyframes shining {
+  0% {
+    background: grey; /* Initial shadow */
+  }
+  100% {
+    background: darkgray; /* Shining shadow */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Paytone One", sans-serif;
+}
+
+button {
+  background: $red;
+  color: white;
+  border: none;
+  transition: background 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    background: white;
+    color: $red;
+  }
+  &:active {
+    scale: 0.9;
+    background: $yellow;
+  }
+}
+
+button,
+a,
+input,
+textarea {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: $red;
+  color: white;
+  padding: 8px;
+  transition: top 0.5s;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+// Partial SCSS import
+@import "header";
+@import "explore";
+@import "detail";
+@import "footer";

@@ -1,0 +1,27 @@
+{
+  "theme_color": "#e10135",
+  "background_color": "#e10135",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/images/icon/icon_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "/images/icon/icon_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en-US",
+  "name": "Manganzine restaurant catalog app",
+  "short_name": "Manganzine app",
+  "start_url": "./index.html",
+  "description": "Progressive web apps daftar katalog restoran",
+  "id": "manganzine-catalogoue-pwa"
+}

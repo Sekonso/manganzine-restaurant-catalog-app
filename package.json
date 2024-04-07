@@ -1,0 +1,50 @@
+{
+  "name": "manganzine-restaurant-catalog-apps",
+  "version": "1.0.0",
+  "description": "PWA daftar katalog restoran",
+  "main": "src/index.js",
+  "scripts": {
+    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "Adriansyah <ancaadri9@domain.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@jest/globals": "^29.6.1",
+    "@types/jest": "^29.5.3",
+    "babel-jest": "^29.6.1",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
+    "mini-css-extract-plugin": "^2.8.1",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0",
+    "workbox-webpack-plugin": "^7.0.0"
+  },
+  "dependencies": {
+    "idb": "^8.0.0",
+    "regenerator-runtime": "^0.14.0",
+    "workbox-window": "^7.0.0"
+  }
+}
