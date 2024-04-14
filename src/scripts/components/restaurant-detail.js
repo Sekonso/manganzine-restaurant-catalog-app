@@ -23,7 +23,7 @@ class RestaurantDetail extends HTMLElement {
     this.innerHTML = `
       <div class="upper">
         <picture>
-          <source media="(min-width: 1080px)" srcset="https://restaurant-api.dicoding.dev/images/large/${this._restaurantData.pictureId}">
+          <source media="(min-width: 1280px)" srcset="https://restaurant-api.dicoding.dev/images/large/${this._restaurantData.pictureId}">
           <source media="(min-width: 760px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${this._restaurantData.pictureId}">
           <img
             loading="lazy"

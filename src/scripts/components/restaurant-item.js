@@ -10,8 +10,7 @@ class RestaurantItem extends HTMLElement {
       <div class="upper-info">
         <span class="city">${this._restaurantData.city}</span>
         <picture class="picture">
-          <source media="(min-width: 1366px)" srcset="https://restaurant-api.dicoding.dev/images/large/${this._restaurantData.pictureId}">
-          <source media="(min-width: 760px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${this._restaurantData.pictureId}">
+          <source media="(min-width: 1600px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${this._restaurantData.pictureId}">
           <img
             src="https://restaurant-api.dicoding.dev/images/small/${this._restaurantData.pictureId}"
             alt="gambar restoran ${this._restaurantData.name}"
