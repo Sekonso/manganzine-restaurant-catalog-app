@@ -99,10 +99,7 @@ module.exports = {
           sizes: [96, 128, 192, 256, 384, 512],
         },
         {
-          src: path.resolve(
-            __dirname,
-            "src/assets/src/assets/icons/icon_maskable.png"
-          ),
+          src: path.resolve(__dirname, "src/assets/icons/icon_maskable.png"),
           size: "1024x1024",
           purpose: "maskable",
         },
