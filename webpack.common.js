@@ -7,7 +7,6 @@ const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
 const ImageminMozjpeg = require("imagemin-mozjpeg");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 module.exports = {
   entry: {

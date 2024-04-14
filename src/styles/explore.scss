@@ -100,7 +100,7 @@
 
       .description {
         height: 5.5rem;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-weight: 400;
         opacity: 0.9;
         overflow: hidden;
@@ -109,10 +109,6 @@
       @media (min-width: 760px) {
         .name {
           font-size: 1.6rem;
-        }
-
-        .description {
-          font-size: 0.9rem;
         }
       }
     }
