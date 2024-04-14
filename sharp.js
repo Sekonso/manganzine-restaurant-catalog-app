@@ -6,9 +6,9 @@ const target = path.resolve(__dirname, "src/public/images/heros");
 
 // Splitting heros image based on sizes
 fs.readdirSync(target).forEach((image) => {
-  // Image with size 800px and "-large.jpg" prefix
+  // Image with size 1080px and "-large.jpg" prefix
   sharp(`${target}/${image}`)
-    .resize(800)
+    .resize(1080)
     .toFile(
       path.resolve(
         __dirname,
@@ -16,9 +16,9 @@ fs.readdirSync(target).forEach((image) => {
       )
     );
 
-  // Image with size 480px and "-large.jpg" prefix
+  // Image with size 720px and "-small.jpg" prefix
   sharp(`${target}/${image}`)
-    .resize(480)
+    .resize(720)
     .toFile(
       path.resolve(
         __dirname,

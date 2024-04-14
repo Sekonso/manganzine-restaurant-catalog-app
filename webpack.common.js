@@ -74,37 +74,13 @@ module.exports = {
     new ImageminWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
-          quality: 60,
+          quality: 70,
           progressive: true,
         }),
       ],
     }),
 
     new MiniCssExtractPlugin(),
-
-    new WebpackPwaManifest({
-      id: "manganzine-catalogoue-pwa",
-      name: "Manganzine restaurant catalog app",
-      short_name: "Manganzine",
-      description: "Progressive web apps daftar katalog restoran",
-      theme_color: "#e10135",
-      background_color: "#e10135",
-      orientation: "any",
-      display: "standalone",
-      dir: "auto",
-      lang: "id",
-      icons: [
-        {
-          src: path.resolve(__dirname, "src/assets/icons/icon_rounded.png"),
-          sizes: [96, 128, 192, 256, 384, 512],
-        },
-        {
-          src: path.resolve(__dirname, "src/assets/icons/icon_maskable.png"),
-          size: "1024x1024",
-          purpose: "maskable",
-        },
-      ],
-    }),
 
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: "./sw.bundle.js",
