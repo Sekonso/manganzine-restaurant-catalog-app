@@ -8,7 +8,6 @@
     <meta name="theme-color" content="#e10135" />
 
     <link rel="icon" href="./images/icon/favicon.ico" type="image/x-icon" />
-    <link rel="manifest" href="./app.manifest" />
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +40,13 @@
     <header>
       <navigation-bar></navigation-bar>
       <section class="hero">
-        <img src="./images/heros/hero-image.jpg" alt="Hero image" loading="lazy">
+        <picture>
+          <source media="(min-width: 720px)" srcset="./images/heros/hero-image-large.jpg">
+          <img src="./images/heros/hero-image-small.jpg" 
+               alt="Hero image"
+               loading="lazy"
+          >
+        </picture>
         <div class="hero-content">
           <h1>MANGANZINE</h1>
           <p>Cari tempat makan favoritmu disini!</p>

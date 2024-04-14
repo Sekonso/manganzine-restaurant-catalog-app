@@ -23,7 +23,7 @@ class RestaurantDetail extends HTMLElement {
     this.innerHTML = `
       <div class="upper">
         <picture>
-          <source media="(min-width: 1366px)" srcset="https://restaurant-api.dicoding.dev/images/large/${this._restaurantData.pictureId}">
+          <source media="(min-width: 1080px)" srcset="https://restaurant-api.dicoding.dev/images/large/${this._restaurantData.pictureId}">
           <source media="(min-width: 760px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${this._restaurantData.pictureId}">
           <img
             loading="lazy"
@@ -63,7 +63,7 @@ class RestaurantDetail extends HTMLElement {
         <p>Berikan ulasanmu</p>
         <input type="text" id="review-name-input" placeholder="Masukkan nama" required>
         <input type="text" id="review-content-input" placeholder="Masukkan ulasan" required>
-        <button type="submit">Kirim</button>
+        <button type="submit" id="submit">Kirim</button>
       </form>
     `;
 
@@ -72,7 +72,7 @@ class RestaurantDetail extends HTMLElement {
     likeButton.setAttribute("aria-label", "like button");
 
     if (this._favorite === "true") {
-      likeButton.id = "dislike";
+      likeButton.id = "unlike";
       likeButton.innerHTML = "<i class='fa-solid fa-heart'></i>";
     } else {
       likeButton.id = "like";
@@ -105,8 +105,9 @@ class RestaurantDetail extends HTMLElement {
       const reviewComment = document.createElement("div");
       reviewComment.classList.add("review");
       reviewComment.innerHTML = `
-        <h4><strong>${review.name}</strong> - ${review.date}</h4>
-        <p>${review.review}</p>
+        <h4 class="review-name">${review.name}</h4>
+        <h4 class="review-date"> - ${review.date}</h4>
+        <p class="review-content">${review.review}</p>
       `;
 
       return reviewComment;

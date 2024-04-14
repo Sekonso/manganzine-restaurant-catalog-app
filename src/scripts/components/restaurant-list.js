@@ -23,9 +23,9 @@ class RestaurantList extends HTMLElement {
   }
 
   renderLoading() {
-    this.innerHTML = ""
+    this.innerHTML = "";
 
-    for(let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 6; i += 1) {
       const restaurantItemSkeleton = document.createElement("div");
       restaurantItemSkeleton.classList.add("restaurant-item-skeleton");
       restaurantItemSkeleton.innerHTML = `
@@ -34,9 +34,9 @@ class RestaurantList extends HTMLElement {
         <div class="paragraph"></div>
         <div class="paragraph"></div>
         <div class="paragraph"></div>
-      `
+      `;
 
-      this.append(restaurantItemSkeleton)
+      this.append(restaurantItemSkeleton);
     }
   }
 

@@ -10,19 +10,19 @@ class RestaurantItem extends HTMLElement {
       <div class="upper-info">
         <span class="city">${this._restaurantData.city}</span>
         <picture class="picture">
-          <source media="(min-width: 1080px)" srcset="https://restaurant-api.dicoding.dev/images/large/${this._restaurantData.pictureId}">
+          <source media="(min-width: 1366px)" srcset="https://restaurant-api.dicoding.dev/images/large/${this._restaurantData.pictureId}">
           <source media="(min-width: 760px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${this._restaurantData.pictureId}">
           <img
-            loading="lazy"
             src="https://restaurant-api.dicoding.dev/images/small/${this._restaurantData.pictureId}"
             alt="gambar restoran ${this._restaurantData.name}"
+            loading="lazy"
           />
         </picture>
         <span class="rating">${this._restaurantData.rating.toFixed(1)}</span>
       </div>
       <div class="lower-info">
-        <h3>${this._restaurantData.name}</h3>
-        <p>${this._restaurantData.description}</p>
+        <h3 class="name">${this._restaurantData.name}</h3>
+        <p class="description">${this._restaurantData.description}</p>
       </div>
     `;
 
@@ -32,6 +32,10 @@ class RestaurantItem extends HTMLElement {
         this.navigateToUrl();
       }
     });
+  }
+
+  getRestaurantData() {
+    return this._restaurantData;
   }
 
   setRestaurantData(data) {

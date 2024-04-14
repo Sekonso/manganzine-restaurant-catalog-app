@@ -14,7 +14,13 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
 
-    await DetailPageHandler.setRestaurantDetailData(url.id);
+    try {
+      const restaurantData = await DetailPageHandler.getRestaurantData(url.id);
+      await DetailPageHandler.setRestaurantDetailData(restaurantData);
+    } catch (error) {
+      document.querySelector("restaurant-detail").renderError();
+      console.error(`Failed to fetch ${error}`);
+    }
   },
 };
 

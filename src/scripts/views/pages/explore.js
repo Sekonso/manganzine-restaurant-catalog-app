@@ -11,9 +11,13 @@ const Explore = {
   },
 
   async afterRender() {
-    const restaurantList = document.querySelector("restaurant-list");
-    const restaurantData = await restaurantSource.restaurantList();
-    await restaurantList.setRestaurantList(restaurantData);
+    try {
+      const restaurantListData = await restaurantSource.restaurantList();
+      document.querySelector("restaurant-list").setRestaurantList(restaurantListData);
+    } catch (error) {
+      document.querySelector("restaurant-list").renderError();
+      console.error(`Failed to fetch ${error}`);
+    }
   },
 };
 
